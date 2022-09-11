@@ -1,0 +1,4 @@
+# Git-Hub-User-Search-App
+Worked with the official GitHub API on this project, got the idea, designs and assets from https://frontendmentor.io , this simple web app allows you to search for any GitHub user, display some basic information like the location, number of repositories, folllowers and locations. I am pretty happy with this so far :)
+
+Hopefully one day, I want to develop a full-stack version of this but with more functionalities like filtering or basically just getting a certain number of users based on their locations, number of followers, number of repositories and what tech stack/language they make use of mostly. I think this will be very helpfull for potential recruiters who want to hire people based on the location and the above mentioned criteria on GitHub. So yh, that's basically it. Thanks for reading.
