@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GitHub User Search</title>
+</head>
+<body>
+
+    <main>
+        <header>
+            <h1 class="logo">devfinder</h1>
+
+            <button id="themeSwitch" class="theme-switch">
+                <span class="mode">Light</span>
+                <img id="themeImg" src="/assets/sun.svg" alt="theme-image">
+            </button>
+        </header>
+
+        <div class="input-field">
+            <img src="/assets/search.svg" alt="search-icon">
+            <input type="text" name="text" id="searchUser">
+            <button id="searchBtn" class="search-btn">Search</button>
+        </div>
+
+        <span class="error">Please kindly input a GitHub user</span>
+
+        <div class="container">
+            <div class="first-col">
+                <img id="userAvatar" src="/assets/test-image.png" alt="user-image">
+
+                <div class="info">
+                    <div class="name__user">
+                        <h1 id="userName" class="name"></h1>
+                        <a href="" id="userLogin" class="user-name"></a>
+                    </div>
+                   
+
+                    <div class="date"><p class="date-info">Joined <span class="date">25 Jan 2011</span></p></div>
+                </div>
+            </div>
+
+            <div class="about">
+                <p id="userBio" class="about-text"></p>
+            </div>
+
+            <div class="stats">
+                <div class="repo-cont">
+                    <h2 class="title">Repos</h2>
+                    <span id="userRepo" class="count"></span>
+                </div>
+
+                <div class="followers-cont">
+                    <h2 class="title">Followers</h2>
+                    <span id="userFollowers" class="count"></span>
+                </div>
+
+                <div class="following-cont">
+                    <h2 class="title">Following</h2>
+                    <span id="userFollowings" class="count"></span>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <div class="first">
+                    <div class="social location">
+                        <img src="/assets/map-pin.svg" alt="location-icon">
+                        <span id="userLocation" class="text"></span>
+                    </div>
+
+                    <div class="social links">
+                        <img src="/assets/link.svg" alt="links-icon">
+                        <a href="" id="userBlog" class="text"></a>
+                    </div>
+
+                    <div class="social email">
+                        <img src="/assets/mail.svg" alt="mail-icon">
+                        <a href="" id="userMail" class="text"></a>
+                    </div>
+                </div>
+
+                <div class="second">
+                    <div class="social twitter">
+                        <img src="/assets/twitter.svg" alt="twitter-icon">
+                        <a href="" id="userTwitter" class="text"></a>
+                    </div>
+
+                    <div class="social company">
+                        <img src="/assets/company.svg" alt="links-comapny">
+                        <span id="userCompany" class="text"></span>
+                    </div>
+
+                    <div class="social hire">
+                        <img src="/assets/send.svg" alt="hire-icon">
+                        <span id="userHire" class="text"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <script src="/main.js"></script>
+</body>
+</html>

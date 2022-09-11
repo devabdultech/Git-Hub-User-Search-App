@@ -1,0 +1,409 @@
+@import url(https://fonts.googleapis.com/css?family=Space+Mono:regular,italic,700);
+
+:root {
+    --bg-color: rgb(20, 29,47);
+    --container-color: rgb(30, 42,71);
+    --stats-bg: rgb(20, 29,47);
+    --text-color: rgb(255, 255, 255);
+    --accent-text-color: rgb(0, 121, 255);
+    --btn-color: rgb(0, 121, 255);
+}
+
+.light-theme {
+    --bg-color: rgb(246, 248,254);
+    --container-color: rgb(254, 254,254);
+    --stats-bg: rgb(246, 248,254);
+    --text-color: rgb(75, 106, 155);
+    --accent-text-color: rgb(0, 121, 255);
+    --btn-color: rgb(0, 121, 255);
+    transition: 0.3s ease-in;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: var(--bg-color);
+    transition: 0.3s ease-in;
+}
+
+main {
+    margin: 1.1rem 1.5rem;
+    transition: 0.3s ease-in;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+header .theme-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+header .theme-switch .mode {
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+header .theme-switch img {
+    width: 1.3rem;
+}
+
+.input-field {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: var(--container-color);
+    padding: 0rem 0.4rem;
+    border-radius: 0.5rem;
+}
+
+.input-field > img {
+    width: 1.6rem;
+}
+
+.input-field > input {
+    width: 80%;
+    padding: 0.7rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.input-field > .search-btn {
+    padding: 0.6rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: var(--btn-color);
+    color: white;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    margin-top: 2rem;
+    background-color: var(--container-color);
+    padding: 1.1rem;
+    border-radius: 0.5rem;
+    display: none;
+    transition: 0.3s ease-in;
+}
+
+.error {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: red;
+    display: none;
+    transition: 2s ease-in-out;
+    animation: shake 0.4s;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.container .first-col {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.container .first-col > img {
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+}  
+
+.container .first-col .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.container .first-col .info .name__user > .name {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.container .first-col .info .name__user > .user-name {
+    font-size: 0.9rem;
+    color: var(--accent-text-color);
+}
+
+.container .first-col .info .date {
+    color: var(--text-color);
+}
+
+.container .about .about-text {
+    color: var(--text-color);
+}
+
+.container .stats {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--stats-bg);
+    padding: 1.1rem;
+    border-radius: 0.5rem;
+}
+
+.container .stats .title {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: 100;
+}
+
+.container .stats .count  {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.repo-cont, .followers-cont, .following-cont {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.container .social-links .first, .second {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.container .social-links .social {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.container .social-links .social > img {
+    width: 1.1rem;
+}
+
+.container .social-links .social > .text {
+    color: var(--text-color);
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    main {
+        width: 70%;
+        margin: 3.5rem auto;
+    }
+
+    header .logo {
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
+
+    header .theme-switch .mode {
+        font-size: 1rem;
+        font-size: 200;
+    }
+
+    .input-field {
+        margin-top: 2rem;
+        gap: 0.3rem;
+        padding: 0rem 0.6rem;
+        border-radius: 0.5rem;
+    }
+    
+    .input-field > img {
+        width: 1.7rem;
+    }
+    
+    .input-field > input {
+        width: 90%;
+        padding: 0.9rem;
+    }
+    
+    .input-field > .search-btn {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .container .first-col {
+        display: flex;
+        gap: 1.8rem;
+    }
+
+    .container .first-col > img {
+        width: 7rem;
+        height: 7rem;
+    }  
+
+    .container .first-col .info .name__user > .name {
+        font-size: 1.5rem;
+    }
+    
+    .container .first-col .info .name__user > .user-name {
+        font-size: 1.1rem;
+        color: var(--accent-text-color);
+    }    
+
+    .container .stats .title {
+        font-size: 1.1rem;
+    }
+    
+    .container .stats .count  {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .container .social-links {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container .social-links .first, .second {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .container .social-links .social > img {
+        width: 1.4rem;
+    }
+}
+
+/* Laptops */
+@media (min-width: 1024px) {
+    main {
+        width: 50%;
+        margin: 4rem auto;
+    }
+
+    header .logo {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    header .theme-switch .mode {
+        font-size: 1.1rem;
+        font-size: 200;
+    }
+
+    .input-field {
+        margin-top: 2.5rem;
+        gap: 0.3rem;
+        padding: 0rem 0.6rem;
+        border-radius: 0.5rem;
+    }
+    
+    .input-field > img {
+        width: 1.8rem;
+    }
+    
+    .input-field > input {
+        width: 90%;
+        padding: 1rem;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 1.5rem;
+        color: white;
+    }
+    
+    .input-field > .search-btn {
+        padding: 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .container {
+        gap: 2.1rem;
+    }
+
+    .container .first-col {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .container .first-col > img {
+        width: 8rem;
+        height: 8rem;
+    }  
+
+    .container .first-col .info .name__user > .name {
+        font-size: 1.7rem;
+    }
+    
+    .container .first-col .info .name__user > .user-name {
+        font-size: 1.3rem;
+        color: var(--accent-text-color);
+    }    
+
+    .container .stats .title {
+        font-size: 1.3rem;
+    }
+    
+    .container .stats .count  {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .container .social-links {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container .social-links .first, .second {
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+    }
+    
+    .container .social-links .social > img {
+        width: 1.5rem;
+    }
+}
